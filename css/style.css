@@ -81,3 +81,20 @@
     margin: 0 10px 20px 10px;
   }
 }
+
+/* footer page */
+.footer-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 85px;
+  height: 157px;
+  background: #707070;
+}
+
+.footer-page p {
+  font-family: "Helvetica";
+  font-size: 0.75rem;
+  color: #ffffff;
+  text-align: center;
+}
