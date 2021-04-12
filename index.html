@@ -86,122 +86,14 @@
                     <h4 class="section-divider-title">Sua seleção especial</h4>
                 </div>
             </header>
-            <ul class="flex-row">
-                <li class="product-item flex-item-3">
-                    <figure class="">
-                        <img src="http://imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6747399" alt="">
-                        <figcaption>Nome do produto</figcaption>
-                    </figure>
-                    <div>
-                        <p>Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.
-                        </p>
-                        <span>De: R$23,99 </span>
-                        <span><b>Por: R$19,99</b></span>
-                        <span>ou 2x de R$9,99</span>
-                        <button>Comprar</button>
-                    </div>
-                </li>
-                <li class="product-item flex-item-3">
-                    <figure class="">
-                        <img src="http://imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6747399" alt="">
-                        <figcaption>Nome do produto</figcaption>
-                    </figure>
-                    <div>
-                        <p>Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.
-                        </p>
-                        <span>De: R$23,99 </span>
-                        <span><b>Por: R$19,99</b></span>
-                        <span>ou 2x de R$9,99</span>
-                        <button>Comprar</button>
-                    </div>
-                </li>
-                <li class="product-item flex-item-3">
-                    <figure class="">
-                        <img src="http://imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6747399" alt="">
-                        <figcaption>Nome do produto</figcaption>
-                    </figure>
-                    <div>
-                        <p>Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.
-                        </p>
-                        <span>De: R$23,99 </span>
-                        <span><b>Por: R$19,99</b></span>
-                        <span>ou 2x de R$9,99</span>
-                        <button>Comprar</button>
-                    </div>
-                </li>
-                <li class="product-item flex-item-3">
-                    <figure class="">
-                        <img src="http://imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6747399" alt="">
-                        <figcaption>Nome do produto</figcaption>
-                    </figure>
-                    <div>
-                        <p>Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.
-                        </p>
-                        <span>De: R$23,99 </span>
-                        <span><b>Por: R$19,99</b></span>
-                        <span>ou 2x de R$9,99</span>
-                        <button>Comprar</button>
-                    </div>
-                </li>
-    
-                <li class="product-item flex-item-3">
-                    <figure class="">
-                        <img src="http://imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6747399" alt="">
-                        <figcaption>Nome do produto</figcaption>
-                    </figure>
-                    <div>
-                        <p>Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.
-                        </p>
-                        <span>De: R$23,99 </span>
-                        <span><b>Por: R$19,99</b></span>
-                        <span>ou 2x de R$9,99</span>
-                        <button>Comprar</button>
-                    </div>
-                </li>
-                <li class="product-item flex-item-3">
-                    <figure class="">
-                        <img src="http://imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6747399" alt="">
-                        <figcaption>Nome do produto</figcaption>
-                    </figure>
-                    <div>
-                        <p>Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.
-                        </p>
-                        <span>De: R$23,99 </span>
-                        <span><b>Por: R$19,99</b></span>
-                        <span>ou 2x de R$9,99</span>
-                        <button>Comprar</button>
-                    </div>
-                </li>
-                <li class="product-item flex-item-3">
-                    <figure class="">
-                        <img src="http://imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6747399" alt="">
-                        <figcaption>Nome do produto</figcaption>
-                    </figure>
-                    <div>
-                        <p>Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.
-                        </p>
-                        <span>De: R$23,99 </span>
-                        <span><b>Por: R$19,99</b></span>
-                        <span>ou 2x de R$9,99</span>
-                        <button>Comprar</button>
-                    </div>
-                </li>
-                <li class="product-item flex-item-3">
-                    <figure class="">
-                        <img src="http://imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6747399" alt="">
-                        <figcaption>Nome do produto</figcaption>
-                    </figure>
-                    <div>
-                        <p>Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.
-                        </p>
-                        <span>De: R$23,99 </span>
-                        <span><b>Por: R$19,99</b></span>
-                        <span>ou 2x de R$9,99</span>
-                        <button>Comprar</button>
-                    </div>
-                </li>
-            </ul>
-            <button>Ainda mais produtos aqui!</button>
+            
+            <ul id="product-view" class="flex-row"></ul>
+
+            <div class="flex-item-12">
+                <div id="loader" class=""></div>
+            </div>
+
+            <button id="btn-next-page" onclick="productController.getNextPage(event)">Ainda mais produtos aqui!</button>
         </article>
         <article class="share-list flex-item-12">
             <header class="section-header">
@@ -231,5 +123,16 @@
             Linx Impulse 2021 </br> @Copyright Luiz Henrique O. Souza
         </p>
     </footer>
+    <script src="js/model/Product.js"></script>
+    <script src="js/model/Pagination.js"></script>
+    <script src="js/model/ProductsList.js"></script>
+    <script src="js/controllers/ProductController.js"></script>
+    <script src="js/services/HttpService.js"></script>
+    <script src="js/services/ProductService.js"></script>
+    <script src="js/views/View.js"></script>
+    <script src="js/views/ProductView.js"></script>
+    <script>
+        let productController = new ProductController();
+    </script>
 </body>
 </html>
