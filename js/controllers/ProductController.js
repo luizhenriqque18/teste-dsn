@@ -5,11 +5,13 @@ class ProductController {
         this._pagination = new Pagianation();
         this._productView = new ProductView($('#product-view'));
         this._btnNextPage = $('#btn-next-page');
+        this._loader = $('#loader');
         this._productView.update(this._productList);
         this.getInit();
     }
 
     getInit() {
+        this.setLoader();
         this._getProduct()
             .then( response => {
                 const {products, nextPage} = response;
@@ -25,6 +27,7 @@ class ProductController {
     }
 
     getNextPage(event) {
+        this.setLoader();
         this.setDisabledBtn();
 
         let path = this._pagination.nextPage.split("/");
@@ -41,6 +44,7 @@ class ProductController {
             .catch(error=>{
                 console.log('error', error);
             }).finally(()=>{
+                this.setLoader(false);
                 this.setDisabledBtn(false);
             });
     }
@@ -57,6 +61,12 @@ class ProductController {
 
         return response;
     }
+
+    setLoader(status = true) {
+        if(status) this._loader.classList.add("loader");
+        else this._loader.classList.remove("loader");
+    }
+
     setDisabledBtn(status = true){
         if(status) {
             this._btnNextPage.classList.add("btn-blocked");
