@@ -1,0 +1,83 @@
+/*body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial,
+    "Lucida Grande", sans-serif;
+}*/
+
+.header-page {
+  background: #707070;
+  color: #fff;
+  opacity: 1;
+  height: calc(399px - 129px - 69px);
+  padding: 69px 0px 129px 0px;
+}
+
+.header-infor {
+  text-align: center;
+}
+
+.header-infor h3 {
+  font-family: "Helvetica", sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+}
+
+.header-infor h1 {
+  font-family: "Helvetica";
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
+
+.header-infor p {
+  font-family: "Helvetica";
+  font-size: 0.875rem;
+  margin-top: 24px;
+  letter-spacing: 0px;
+}
+
+.header-menu {
+  margin-top: 50px;
+  font-family: "Helvetica";
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.header-menu li {
+  display: inline-block;
+  width: 160px;
+  margin: 0px 40px 0px 0px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 6px #00000029;
+  border: 1px solid #707070;
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.header-menu li:last-child {
+  margin: 0px 0px 0px 0px;
+}
+
+.header-menu li a {
+  display: block;
+  padding: 13px 0px 13px 0;
+  text-decoration: none;
+  color: #888888;
+  letter-spacing: 0px;
+}
+
+@media (max-width: 420px) {
+  .header-infor {
+    text-align: left;
+    padding: 0 16px 0 16px;
+  }
+
+  .header-menu li {
+    margin: 0 10px 20px 10px;
+  }
+
+  .header-menu li:last-child {
+    margin: 0 10px 20px 10px;
+  }
+}
