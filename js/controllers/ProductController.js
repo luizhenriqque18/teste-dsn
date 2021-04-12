@@ -6,7 +6,6 @@ class ProductController {
         this._productView = new ProductView($('#product-view'));
         this._btnNextPage = $('#btn-next-page');
         this._loader = $('#loader');
-        this._productView.update(this._productList);
         this.getInit();
     }
 
