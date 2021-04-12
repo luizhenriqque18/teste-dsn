@@ -82,6 +82,29 @@
   }
 }
 
+/* Help Algorithm */
+
+.help-algorithm {
+  padding: 21px 0px 79px 0px;
+}
+
+.help-algorithm-about {
+  font-family: "Helvetica";
+  color: #707070;
+  margin-bottom: 30px;
+}
+
+.help-algorithm-about h3 {
+  font-size: 1.25rem;
+  padding-bottom: 30px;
+  letter-spacing: 0px;
+}
+
+.help-algorithm-about p {
+  font-size: 0.75rem;
+  letter-spacing: 0px;
+}
+
 /* footer page */
 .footer-page {
   display: flex;
@@ -97,4 +120,109 @@
   font-size: 0.75rem;
   color: #ffffff;
   text-align: center;
+}
+
+/* Styles to components */
+
+.section-header {
+  font-family: "Helvetica";
+}
+
+.section-divider {
+  font-family: "Helvetica";
+  color: #888888;
+  display: flex;
+  align-items: center;
+}
+
+.section-divider::before {
+  content: "";
+  background: #707070;
+  height: 1px;
+  width: 100%;
+  opacity: 1;
+}
+
+.section-divider::after {
+  content: "";
+  background: #707070;
+  height: 1px;
+  width: 100%;
+  opacity: 1;
+}
+
+.section-divider-title {
+  display: inline;
+  white-space: nowrap;
+  padding: 0px 10px;
+  text-align: center;
+  font-size: 1.125rem;
+}
+
+.section-divider-subtitle {
+  margin-top: 44px;
+  font-size: 0.875rem;
+  color: #707070;
+  text-align: center;
+}
+
+/* form */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  font-family: "Helvetica";
+}
+
+.form-group-radio {
+  display: inline-block;
+  font-family: "Helvetica";
+  font-size: 0.75rem;
+  margin-bottom: 23px;
+}
+
+.form-group label {
+  font-size: 0.75rem;
+  margin-bottom: 7px;
+  color: #888888;
+}
+
+.form-group input[type="text"] {
+  font-size: 0.75rem;
+  color: #888888;
+  height: 26px;
+  padding: 0px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border: 1px solid #707070;
+  opacity: 1;
+}
+
+.form-group-radio label {
+  font-size: 0.75rem;
+  margin-bottom: 7px;
+  color: #888888;
+}
+
+.form-group-radio input[type="radio"] {
+  margin: 0px;
+  vertical-align: bottom;
+  background: #ffffff;
+  border: 1px solid #707070;
+  opacity: 1;
+}
+
+.btn {
+  text-align: center;
+  font-size: 1rem;
+  background: #ffffff;
+  color: #888888;
+  border: 1px solid #707070;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.btn-form {
+  font-family: "Helvetica";
+  padding: 11px 0;
 }
