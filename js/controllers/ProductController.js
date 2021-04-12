@@ -1,13 +1,27 @@
 class ProductController {
     constructor() {
         let $ = document.querySelector.bind(document);
-        this.getProduct();
+        this._productList = new ProductList();
+        this._productView = new ProductView($('#productView'));
+        this._productView.update(this._productList);
+        this.getInit();
     }
 
-    getProduct() {
+    getInit() {
+        this._getProduct()
+            .then( response => {
+                this._productList.addList(response);
+                this._productView.update(this._productList);
+            })
+            .catch(error=>{
+                console.log('error', error);
+            });
+    }
+
+    async _getProduct() {
         let service = new ProductService();
-        service.getProduct().then(response => {
-            console.log('controller', response);
-        });
+        let response = await service.getProduct()
+
+        return response;
     }
 }

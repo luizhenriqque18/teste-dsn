@@ -30,11 +30,11 @@ class ProductService {
                 .then(response => {
                     let { products } = response;
 
-                    console.log('response', response);
+                    //console.log('response', response);
                     resolve(products.map(product=> new Product(product)));
                 })
                 .catch(error => {
-                    console.log('Error getProduct: ', error);
+                    //console.log('Error getProduct: ', error);
                     reject('Não foi possivel carregar lista de produtos.');
                 });
         });
