@@ -5,19 +5,19 @@ class ProductService {
         this._url = 'https://frontend-intern-challenge-api.iurykrieger.vercel.app';
     }
 
-    getProductByPage(page = 0) {
+    getProductByPage(path) {
         
         return new Promise((resolve, reject) => {
             this._http
-                .get(`${this._url}/products?page=${page}`)
+                .get(`${this._url}/${path}`)
                 .then(response => {
-                    let { products } = response;
-                    
-                    console.log('response', response);
-                    resolve(products.map(product=> new Product(product)));
+                    let { products, nextPage } = response;
+                    resolve({
+                        nextPage,
+                        products: products.map(product=> new Product(product))
+                    });
                 })
                 .catch(error => {
-                    console.log('Error getProductByPage: ', error);
                     reject(`Não foi possivel carregar página ${page} com a lista de produtos.`);
                 });
         });
@@ -28,13 +28,13 @@ class ProductService {
             this._http
                 .get(`${this._url}/products`)
                 .then(response => {
-                    let { products } = response;
-
-                    //console.log('response', response);
-                    resolve(products.map(product=> new Product(product)));
+                    let { products, nextPage } = response;
+                    resolve({
+                        nextPage,
+                        products: products.map(product=> new Product(product))
+                    });
                 })
                 .catch(error => {
-                    //console.log('Error getProduct: ', error);
                     reject('Não foi possivel carregar lista de produtos.');
                 });
         });

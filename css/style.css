@@ -308,6 +308,10 @@ p {
   width: 100%;
 }
 
+.btn-blocked {
+  cursor: not-allowed;
+}
+
 .btn-form {
   font-family: "Helvetica";
   padding: 11px 0;

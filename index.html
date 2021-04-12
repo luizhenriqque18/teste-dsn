@@ -87,9 +87,10 @@
                 </div>
             </header>
             
-            <ul id="productView" class="flex-row"></ul>
+            <ul id="product-view" class="flex-row"></ul>
 
-            <button>Ainda mais produtos aqui!</button>
+
+            <button id="btn-next-page" onclick="productController.getNextPage(event)">Ainda mais produtos aqui!</button>
         </article>
         <article class="share-list flex-item-12">
             <header class="section-header">
@@ -120,6 +121,7 @@
         </p>
     </footer>
     <script src="js/model/Product.js"></script>
+    <script src="js/model/Pagination.js"></script>
     <script src="js/model/ProductsList.js"></script>
     <script src="js/controllers/ProductController.js"></script>
     <script src="js/services/HttpService.js"></script>
