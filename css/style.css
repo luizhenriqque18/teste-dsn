@@ -7,7 +7,7 @@
   background: #707070;
   color: #fff;
   opacity: 1;
-  height: calc(399px - 129px - 69px);
+  /* height: calc(399px - 129px - 69px); */
   padding: 69px 0px 129px 0px;
 }
 
