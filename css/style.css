@@ -273,11 +273,13 @@ p {
   color: #888888;
 }
 
-.form-group input[type="text"] {
+.form-group input[type="text"],
+input[type="email"],
+input[type="number"] {
   font-size: 0.75rem;
   color: #888888;
   height: 26px;
-  padding: 0px;
+  padding: 5px;
   margin-bottom: 20px;
   background: #ffffff;
   border: 1px solid #707070;
@@ -330,6 +332,10 @@ p {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
